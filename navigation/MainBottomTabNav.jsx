@@ -7,7 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import MyDeliveries from "../screens/MyDeliveries";
 import Support from "../screens/Support";
 
-import NewDeliveryStackNav from "../navigation/NewDeliveryStackNav";
+import NewDeliveryStackNav from "./NewDeliveryStackNav";
 
 const NavTabs = createBottomTabNavigator();
 
