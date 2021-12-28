@@ -1,13 +1,13 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
-import MyDeliveries from "../screens/MyDeliveries";
-import Support from "../screens/Support";
+import MyDeliveries from '../screens/MyDeliveries';
+import Support from '../screens/Support';
 
-import NewDeliveryStackNav from "./NewDeliveryStackNav";
+import NewDeliveryStackNav from './NewDeliveryStackNav';
 
 const NavTabs = createBottomTabNavigator();
 
@@ -20,16 +20,16 @@ export default function MainBottomTabNav() {
           component={MyDeliveries}
           options={({ navigation }) => ({
             tabBarBadge: 3,
-            title: "My Deliveries",
-            tabBarIcon: ({ focused, color, size }) => {
-              return <Ionicons name="list" size={size} color={color} />;
-            },
+            title: 'My Deliveries',
+            tabBarIcon: ({ focused, color, size }) => (
+              <Ionicons name="list" size={size} color={color} />
+            ),
             headerRight: () => (
               <Ionicons
                 name="add-circle-outline"
                 size={25}
                 color="#000"
-                onPress={() => navigation.navigate("NewDeliveryStackNav")}
+                onPress={() => navigation.navigate('NewDeliveryStackNav')}
                 style={styles.headerIcons}
               />
             ),
@@ -40,12 +40,10 @@ export default function MainBottomTabNav() {
           component={NewDeliveryStackNav}
           options={{
             headerShown: false,
-            title: "New Delivery",
-            tabBarIcon: ({ focused, color, size }) => {
-              return (
-                <Ionicons name="add-circle-outline" size={size} color={color} />
-              );
-            },
+            title: 'New Delivery',
+            tabBarIcon: ({ focused, color, size }) => (
+              <Ionicons name="add-circle-outline" size={size} color={color} />
+            ),
           }}
         />
 
@@ -54,16 +52,10 @@ export default function MainBottomTabNav() {
           component={Support}
           options={{
             tabBarBadge: 2,
-            title: "Support Tickets",
-            tabBarIcon: ({ focused, color, size }) => {
-              return (
-                <Ionicons
-                  name="help-circle-outline"
-                  size={size}
-                  color={color}
-                />
-              );
-            },
+            title: 'Support Tickets',
+            tabBarIcon: ({ focused, color, size }) => (
+              <Ionicons name="help-circle-outline" size={size} color={color} />
+            ),
           }}
         />
       </NavTabs.Navigator>

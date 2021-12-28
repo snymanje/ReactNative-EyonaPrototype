@@ -1,8 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 import MainBottomTabNav from './navigation/MainBottomTabNav';
 
 export default function App() {
-  return (
-    <MainBottomTabNav />
-  );
+  return <MainBottomTabNav />;
 }
